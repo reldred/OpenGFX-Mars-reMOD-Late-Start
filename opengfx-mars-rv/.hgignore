@@ -1,0 +1,18 @@
+# Use glob syntax:
+syntax: glob
+
+.nmlcache*
+
+*.swp
+*.grf
+
+ogfx-mars-rv*
+
+parsetab.py
+custom_tags.txt
+docs/readme.txt
+
+Makefile_gfx
+Makefile_gfx.dep
+Makefile.fordist
+*.scm

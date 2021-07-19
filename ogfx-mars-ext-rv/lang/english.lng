@@ -1,0 +1,10 @@
+##grflangid 0x00
+# This is the English language file
+
+# GRF name and description definitions
+STR_GRF_NAME				:OpenGFX Mars Xtended RoVers r2
+STR_GRF_DESCRIPTION			:Additional Road Vehicles for OpenGFX Mars{}{COPYRIGHT}2014 Twyster{}License: GPL v2
+
+# vehicle names
+STR_NAME_GTR10				:AetherWorks GTR-10 Freight Halftrack
+STR_NAME_LIOX				:Comet Industries "LiOX" Tanker Crawler

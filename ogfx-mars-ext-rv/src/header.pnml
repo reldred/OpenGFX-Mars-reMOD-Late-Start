@@ -1,0 +1,39 @@
+/*
+ *  This file is part of the OpenGFX Mars Xtended RoVers and in turn part of the OpenGFX Mars Xpanded project
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the license might or might not be legally required (check the included license.txt for more information before choosing a license)
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+ 
+//Define the grf
+grf {
+    grfid: "OMX\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 2;
+    min_compatible_version: 2;
+}
+/* The above is the GRF block, obviously */
+
+//check for OpenTTD and version
+if (ttd_platform != PLATFORM_OPENTTD) {
+	//requires OpenTTD
+	error(FATAL, USED_WITH, "OpenTTD");
+}
+else {
+	//check for OpenTTD version
+	if (openttd_version < version_openttd(version_openttd(1, 3, 3, 26393)
+	//requires OpenTTD version
+	error(FATAL, REQUIRES_OPENTTD, "1.3.3 / r23971");
+	}
+}
+/* The above requirement was the first version which this GRF was recorded as tested on, unless stated otherwise immediately below */
+/* No changes in minimum version requirement */
+
+disable_item(FEAT_ROADVEHS, 00, 87);
+/* the above disables default road vehicles */
+
+basecost {
+	PR_BUILD_VEHICLE_ROAD: 13;
+	PR_RUNNING_ROADVEH: 13;
+	}

@@ -1,0 +1,55 @@
+/*
+ *  This file is part of the OpenGFX Mars Xtended RoVers and in turn part of the OpenGFX Mars Xpanded project
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the license might or might not be legally required (check the included license.txt for more information before choosing a license)
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+/*
+* ITEM
+*/
+
+item(FEAT_ROADVEHS, item_gtr10) {
+    property {
+        // Basic Properties
+        name:                           string(STR_NAME_GTR10);
+        climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL, CLIMATE_TOYLAND);
+		
+		// Vehicle Properties
+        introduction_date:              date(1910,01,01);
+        model_life:                     50;
+        /* retire_early not set, use default retirement behaviour */
+        vehicle_life:                   50;
+        reliability_decay:              20;
+        speed:                          80 km/h;
+        power:                          120 hp;
+		air_drag_coefficient:			0.05;
+        weight:                         2.0 ton;
+		
+		//Cargo properties
+		cargo_capacity:                 40;
+		CARGODEF_GTR10
+		//cargo_allow_refit:			no need to define so far
+		//cargo_disallow_refit:			no need to define so far
+        loading_speed:                  3;	// Deliberately low for pressurised cargo
+		
+		// Costs
+        cost_factor:                    20;	//Should be 35,000
+        running_cost_factor:            18; //Should be 3,600
+		running_cost_base:              RUNNING_COST_ROADVEH;
+		refit_cost:                     0;	// Refitting is free
+		/* cargo_age_period is left at default */
+
+        // Graphics & Sound
+		misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH; //enable new graphics
+        sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+        /* Visual effect is left at default (no effect) */
+    }
+
+    // Define Graphics
+	/* I had a bit of trouble with this due to poor documentation, so I just guessed and turned out to be right; livery by switch requires you to put the switch name in place of the spritegroup name */
+	graphics {
+	default: switch_gtr10_style;
+	}
+}

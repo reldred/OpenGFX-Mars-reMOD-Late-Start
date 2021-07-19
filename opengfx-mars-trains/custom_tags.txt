@@ -1,0 +1,6 @@
+VERSION        :noRev
+VERSION_STRING :noRev
+TITLE          :OpenGFX Mars Trains reMOD Late Start noRev
+FILENAME       :ogfx-mars-trains-remod.grf
+REPO_HASH      :
+NEWGRF_VERSION :0

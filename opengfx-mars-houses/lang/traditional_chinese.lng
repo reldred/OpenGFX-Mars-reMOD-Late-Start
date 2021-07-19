@@ -1,0 +1,14 @@
+##grflangid 0x0c
+##plural 1
+
+STR_GRF_NAME :OpenGFX 火星棲境套件 {VERSION}
+STR_GRF_DESC :{ORANGE}火星棲境套件{}為您打造夢幻的火星場景{}{BLACK}圖形：{SILVER}Zephyris{}{BLACK}編程：{SILVER}Elyon
+STR_GRF_URL :http://dev.openttdcoop.org/projects/opengfx-mars-houses
+
+STR_NAME_HABITAT :居住設施
+STR_NAME_LARGE_HABITAT :大型居住設施
+STR_NAME_TALL_HABITAT :多層居住設施
+STR_NAME_TOWER_HABITAT :高大居住設施
+STR_NAME_LUXURY_TOWER_HABITAT :豪華居住設施
+STR_NAME_PARK :公園
+STR_NAME_TALL_PARK :空中公園

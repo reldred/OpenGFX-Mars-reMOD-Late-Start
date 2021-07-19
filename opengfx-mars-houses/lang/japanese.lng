@@ -1,0 +1,14 @@
+##grflangid 0x39
+##plural 1
+
+STR_GRF_NAME :OpenGFX Mars Habitats {VERSION}
+STR_GRF_DESC :{ORANGE}Martian Habitats{}火星の環境のための住居{}{BLACK}グラフィック: {SILVER}Zephyris{}{BLACK}プログラミング: {SILVER}Elyon
+STR_GRF_URL :http://dev.openttdcoop.org/projects/opengfx-mars-houses
+
+STR_NAME_HABITAT :住居
+STR_NAME_LARGE_HABITAT :大きい住居
+STR_NAME_TALL_HABITAT :背が高い住居
+STR_NAME_TOWER_HABITAT :タワー型住居
+STR_NAME_LUXURY_TOWER_HABITAT :贅沢なタワー型住居
+STR_NAME_PARK :公園
+STR_NAME_TALL_PARK :背が高い公園

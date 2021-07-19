@@ -1,0 +1,17 @@
+/*
+ *  This file is part of the OpenGFX Mars Xtended RoVers and in turn part of the OpenGFX Mars Xpanded project
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the license might or might not be legally required (check the included license.txt for more information before choosing a license)
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+ //this file lists all cargo refits for each vehicle.
+ //any changes to cargo refits can be done centrally from this file.
+ 
+ #define CARGODEF_GTR10 \
+ cargo_allow_refit:				[PRGD, GOOD, FOOD, ENSP, PLAS, CPNT]; \
+ cargo_disallow_refit:			[PASS, ORGN, FERT, N2__, O2__, H2__, CHEM, ORES, WATR, RGTH];
+ 
+ #define CARGODEF_LIOX \
+ cargo_allow_refit:				[N2__, O2__, CHEM, WATR]; \
+ cargo_disallow_refit:			[PASS, PRGD, GOOD, FOOD, ENSP, ORGN, FERT, PLAS, CPNT, H2__, ORES, RGTH];

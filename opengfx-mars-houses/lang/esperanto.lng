@@ -1,0 +1,15 @@
+##grflangid 0x05
+##plural 0
+##case n
+
+STR_GRF_NAME :OpenGFX Marso Vivejoj {VERSION}
+STR_GRF_DESC :{ORANGE}Marsaj Vivejoj{}Vivejoj por Marsa ĉirkaŭaĵo{}{BLACK}Grafikoj: {SILVER}Zephyris{}{BLACK}Programado: {SILVER}Elyon
+STR_GRF_URL :http://dev.openttdcoop.org/projects/opengfx-mars-houses
+
+STR_NAME_HABITAT :Vivejo
+STR_NAME_LARGE_HABITAT :Granda vivejo
+STR_NAME_TALL_HABITAT :Alta vivejo
+STR_NAME_TOWER_HABITAT :Turvivejo
+STR_NAME_LUXURY_TOWER_HABITAT :Luksa turvivejo
+STR_NAME_PARK :Parko
+STR_NAME_TALL_PARK :Alta Parko

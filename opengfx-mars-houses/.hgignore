@@ -1,0 +1,18 @@
+syntax: glob
+
+.nmlcache*
+
+*.swp
+*.grf
+
+ogfx-mars-houses*
+
+parsetab.py
+custom_tags.txt
+docs/readme.txt
+*.grf.cache
+*.grf.cacheindex
+
+Makefile.gfx.dep
+Makefile.fordist
+*.scm

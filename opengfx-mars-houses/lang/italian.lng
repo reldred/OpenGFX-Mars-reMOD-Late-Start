@@ -1,0 +1,16 @@
+##grflangid 0x27
+##plural 0
+##gender m ma f
+##case fp fs mp ms
+
+STR_GRF_NAME :Ambientazione marziana OpenGFX {VERSION}
+STR_GRF_DESC :{ORANGE}Ambientazione marziana{}Elementi per la creazione di un ambiente marziano{}{BLACK}Grafica: {SILVER}Zephyris{}{BLACK}Programmazione: {SILVER}Elyon
+STR_GRF_URL :http://dev.openttdcoop.org/projects/opengfx-mars-houses
+
+STR_NAME_HABITAT :Abitazione
+STR_NAME_LARGE_HABITAT :Abitazione grande
+STR_NAME_TALL_HABITAT :Abitazione alta
+STR_NAME_TOWER_HABITAT :Abitazione a torre
+STR_NAME_LUXURY_TOWER_HABITAT :Abitazione a torre di lusso
+STR_NAME_PARK :Parco
+STR_NAME_TALL_PARK :Parco alto

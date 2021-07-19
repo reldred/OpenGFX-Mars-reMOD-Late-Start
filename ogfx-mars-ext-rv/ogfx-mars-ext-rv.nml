@@ -1,0 +1,176 @@
+//Define the grf
+grf {
+    grfid: "OMX\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 1;
+    min_compatible_version: 1;
+}
+/* The above is the GRF block, obviously */
+
+//Define the cargo translation table
+cargotable {
+	PASS, //Passengers (pressurised)		Passengers & Covered (fallback to Covered instead of Pressurised)
+	PRGD, //Pressurised goods				Piece goods & Covered
+	GOOD, //General goods					Piece goods
+	FOOD, //Food							Refrigerated & Covered
+	ENSP, //Engineering supplies/machinery	Piece goods
+	ORGN, //Organics						Bulk
+	FERT, //Fertiliser						Liquid
+	PLAS, //Plastic							Piece goods
+	CPNT, //Components						Piece goods
+	N2__, //Nitrogen						Liquid (fallback to Liquid instead of Gas)
+	O2__, //Oxygen							Liquid (fallback to Liquid instead of Gas)
+	H2__, //Hydrogen						Liquid (fallback to Liquid instead of Gas)
+	CHEM, //Chemicals						Liquid & Hazardous
+	ORES, //Mixed ores						Bulk
+	WATR, //Water							Liquid
+	RGTH, //Regolith						Bulk
+}
+
+disable_item(FEAT_ROADVEHS, 00, 87);
+
+/* This is the sprite template for the GTR-10 Freight Halftrack */
+template tmpl_gtr10(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    [  0 + x, y,       10,    28,      -6,      -11]
+    [ 20 + x, y,       26,    28,     -16,      -15]
+    [ 50 + x, y,       36,    28,     -22,      -21]
+    [ 90 + x, y,       26,    28,     -11,      -17]
+    [120 + x, y,       10,    28,      -4,      -14]
+    [140 + x, y,       26,    28,     -15,      -16]
+    [170 + x, y,       36,    28,     -14,      -20]
+    [210 + x, y,       26,    28,     -10,      -15]
+}
+
+/* Steampunk is the copper and gold variation from before 1945 and Atomic is the grey and 2CC from after 1946 */
+
+//graphics definition
+spriteset(spriteset_gtr10_steampunk, "gfx/gtr10_sprites.png") {
+    tmpl_gtr10(0, 0)
+}
+
+spriteset(spriteset_gtr10_atomic, "gfx/gtr10_sprites.png") {
+    tmpl_gtr10(260, 0)
+}
+
+/* tmpl means template, so (0, 0) means the sprite locating is starting from the top left of the image, and (260, 0) means its starting from the top of the image but 260 pixels from the left edge */
+
+/* Because the switch can't be called upon by the graphics block without a name, you need to put a self-chosen name for the switch in the <ID> section; in this case, "switch_gtr10_style" */
+
+switch (FEAT_ROADVEHS, SELF, switch_gtr10_style, build_year) {
+	0..1944: spriteset_gtr10_steampunk; //case: view "steampunk" 
+	spriteset_gtr10_atomic; //case: view "atomic"
+}
+
+/* And of course the definition of the road vehicles, but because they are fictional I used the estimates of a knowledgeable family member */
+/* Note that 1/6th gravity, while realistic for Mars, is not possible as any vehicle less than 1 ton in weight slows to 2 km/h due to "rolling over" to maximum */
+/* If anyone knows a trick we could do with horsepower, speed, weight and/or cargo capacity to mimic Martian operating conditions without going below 1 ton in weight, please let everyone know */
+
+/* AetherWorks A-810 Freight Halftrack */
+item(FEAT_ROADVEHS, item_gtr10) {
+    property {
+        // Basic Properties
+        name:                           string(STR_NAME_GTR10);
+        climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL, CLIMATE_TOYLAND);
+		
+		// Vehicle Properties
+        introduction_date:              date(1910,01,01);
+        model_life:                     50;
+        /* retire_early not set, use default retirement behaviour */
+        vehicle_life:                   50;
+        reliability_decay:              20;
+        speed:                          80 km/h;
+        power:                          120 hp;
+		air_drag_coefficient:			0.05;
+        weight:                         2.0 ton;
+		
+		//Cargo properties
+		cargo_capacity:                 40;
+		refittable_cargo_classes:       bitmask(CC_ARMOURED, CC_PIECE_GOODS, CC_REFRIGERATED, CC_COVERED);
+		non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_MAIL);
+		//cargo_allow_refit:			no need to define so far
+		//cargo_disallow_refit:			no need to define so far
+        loading_speed:                  3;	// Deliberately low for pressurised cargo
+		
+		// Costs
+        cost_factor:                    10;	//Should be 35,000 MRD$ - In Progress, uses x85 custom currency
+        running_cost_factor:            25;
+		running_cost_base:              RUNNING_COST_ROADVEH;
+		refit_cost:                     0;	// Refitting is free
+		/* cargo_age_period is left at default */
+
+        // Graphics & Sound
+		misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH; //enable new graphics
+        sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+        /* Visual effect is left at default (no effect) */
+    }
+
+    // Define Graphics
+	/* I had a bit of trouble with this due to poor documentation, so I just guessed and turned out to be right; livery by switch requires you to put the switch name in place of the spritegroup name */
+	graphics {
+	default: switch_gtr10_style;
+	}
+}
+
+/* This is the sprite template for the C-1500 Tanker Crawler */
+template tmpl_liox(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    [  0 + x, y,       10,    28,      -6,      -14]
+    [ 20 + x, y,       26,    28,     -16,      -16]
+    [ 50 + x, y,       36,    28,     -18,      -21]
+    [ 90 + x, y,       26,    28,     -10,      -15]
+    [120 + x, y,       10,    28,      -4,      -16]
+    [140 + x, y,       26,    28,     -16,      -15]
+    [170 + x, y,       36,    28,     -18,      -20]
+    [210 + x, y,       26,    28,     -10,      -16]
+}
+
+spriteset(spriteset_liox_atomic, "gfx/liox_sprites.png") {
+    tmpl_liox(0, 0)
+}
+
+/* Comet Industries LiOX Tanker Crawler */
+item(FEAT_ROADVEHS, item_liox) {
+    property {
+        // Basic Properties
+        name:                           string(STR_NAME_LIOX);
+        climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL, CLIMATE_TOYLAND);
+		
+		// Vehicle Properties
+        introduction_date:              date(1960,01,01);
+        model_life:                     33;
+        /* retire_early not set, use default retirement behaviour */
+        vehicle_life:                   30;
+        reliability_decay:              17;
+		speed:                          96 km/h;
+        power:                          200 hp;
+		air_drag_coefficient:			0.05;
+        weight:                         5.0 ton;
+		
+		// Cargo Properties
+		cargo_capacity:                 18;
+        refittable_cargo_classes:       bitmask(CC_LIQUID);
+        non_refittable_cargo_classes:   bitmask(CC_PASSENGERS, CC_MAIL);
+        loading_speed:                  5;
+        /* cargo_age_period is left at default */
+		
+		// Costs
+		cost_factor:                    14; //Should be 50,000 MRD$ - In Progress, uses x85 custom currency
+        running_cost_factor:            40;
+		running_cost_base:              RUNNING_COST_ROADVEH;
+		refit_cost:                     0; // Refitting is free
+
+        // Graphics & Sound
+		misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH; //enable new graphics
+        sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+        /* Visual effect is left at default (no effect) */
+    }
+
+    // Define graphics
+    graphics {
+        default: spriteset_liox_atomic;
+    }
+}

@@ -1,0 +1,8 @@
+# Use glob syntax:
+syntax: glob
+
+# Ignore pcx files, as there are always 8bpp png partners
+*.pcx
+# Ignore blender backup files
+*.blend1
+*.blend2

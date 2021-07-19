@@ -1,0 +1,25 @@
+/*
+ *  This file is part of the OpenGFX Mars Xtended RoVers and in turn part of the OpenGFX Mars Xpanded project
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the license might or might not be legally required (check the included license.txt for more information before choosing a license)
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+/*
+* Vehicle
+*/
+
+spriteset(spriteset_gtr10_steampunk, "gfx/gtr10_sprites.png") {
+    tmpl_gtr10(0, 0)
+}
+
+spriteset(spriteset_gtr10_atomic, "gfx/gtr10_sprites.png") {
+    tmpl_gtr10(260, 0)
+}
+
+/* Because the switch can't be called upon by the graphics block without a name, you need to put a self-chosen name for the switch in the <ID> section; in this case, "switch_gtr10_style" */
+
+switch (FEAT_ROADVEHS, SELF, switch_gtr10_style, build_year) {
+	0..1944: spriteset_gtr10_steampunk; //case: view "steampunk" 
+	spriteset_gtr10_atomic; //case: view "atomic"
+}

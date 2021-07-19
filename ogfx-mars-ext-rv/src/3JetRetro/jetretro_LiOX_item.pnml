@@ -1,0 +1,52 @@
+/*
+ *  This file is part of the OpenGFX Mars Xtended RoVers and in turn part of the OpenGFX Mars Xpanded project
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the license might or might not be legally required (check the included license.txt for more information before choosing a license)
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+/*
+* ITEM
+*/
+
+item(FEAT_ROADVEHS, item_liox) {
+    property {
+        // Basic Properties
+        name:                           string(STR_NAME_LIOX);
+        climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL, CLIMATE_TOYLAND);
+		
+		// Vehicle Properties
+        introduction_date:              date(1960,01,01);
+        model_life:                     33;
+        /* retire_early not set, use default retirement behaviour */
+        vehicle_life:                   30;
+        reliability_decay:              17;
+		speed:                          96 km/h;
+        power:                          200 hp;
+		air_drag_coefficient:			0.05;
+        weight:                         5.0 ton;
+		
+		// Cargo Properties
+		cargo_capacity:                 18;
+        CARGODEF_LIOX
+        loading_speed:                  5;
+        /* cargo_age_period is left at default */
+		
+		// Costs
+		cost_factor:                    29; //Should be 50,000
+        running_cost_factor:            25; //Should be 5,000
+		running_cost_base:              RUNNING_COST_ROADVEH;
+		refit_cost:                     0; // Refitting is free
+
+        // Graphics & Sound
+		misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH; //enable new graphics
+        sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+        /* Visual effect is left at default (no effect) */
+    }
+
+    // Define graphics
+    graphics {
+        default: spriteset_liox_jetretro;
+    }
+}

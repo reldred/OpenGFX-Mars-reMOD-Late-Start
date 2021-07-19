@@ -1,0 +1,31 @@
+/*
+ *  This file is part of the OpenGFX Mars Xtended RVs and in turn part of the OpenGFX Mars Xpanded project
+ *  This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the license might or might not be legally required (check the included license.txt for more information before choosing a license)
+ *  This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ *  You should have recieved a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+ 
+/*
+* GRF HEADER
+*/
+
+//define grf
+#include "src/header.pnml"
+//include sprite templates
+#include "src/templates.pnml"
+//cargo translation table
+#include "src/cargotable.pnml"
+//cargo refit definitions
+#include "src/cargorefits.pnml"
+
+/*
+* VEHICLES
+*/
+
+//GTR-10
+#include "src/0Steampunk/steampunk_GTR-10_item.pnml"
+#include "src/0Steampunk/steampunk_GTR-10_graphics.pnml"
+
+//LiOX
+#include "jetretro_LiOX_item.pnml"
+#include "jetretro_LiOX_graphics.pnml"

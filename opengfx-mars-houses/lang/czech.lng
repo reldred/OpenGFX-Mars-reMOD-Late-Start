@@ -1,0 +1,16 @@
+##grflangid 0x15
+##plural 10
+##gender fp map f mnp m n np
+##case acc nom loc big voc ins dat small gen
+
+STR_GRF_NAME :OpenGFX Marsovské bydlení {VERSION}
+STR_GRF_DESC :{ORANGE}Marťanské bydlení{}Bydlení pro prostředí Marsu{}{BLACK}Grafika: {SILVER}Zephyris{}{BLACK}Naprogramováno: {SILVER}Elyon
+STR_GRF_URL :http://dev.openttdcoop.org/projects/opengfx-mars-houses
+
+STR_NAME_HABITAT :Bydlení
+STR_NAME_LARGE_HABITAT :Velké bydlení
+STR_NAME_TALL_HABITAT :Vysoké bydlení
+STR_NAME_TOWER_HABITAT :Věžní bydlení
+STR_NAME_LUXURY_TOWER_HABITAT :Luxusní bydlení
+STR_NAME_PARK :Park
+STR_NAME_TALL_PARK :Vysoký park
