@@ -50,8 +50,12 @@ spritelayout spritelayout_tall_park_0 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) > 512 ||
       construction_state < 2;
   }
   building {
@@ -63,8 +67,12 @@ spritelayout spritelayout_tall_park_0 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) > 512 ||
       construction_state < 2;
   }
   building {
@@ -76,8 +84,12 @@ spritelayout spritelayout_tall_park_0 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) > 512 ||
       construction_state < 2;
   }
   building {
@@ -89,8 +101,12 @@ spritelayout spritelayout_tall_park_0 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) > 512 ||
       construction_state < 2;
   }
   building {
@@ -110,8 +126,12 @@ spritelayout spritelayout_tall_park_1 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) > 512 ||
       construction_state < 2;
   }
   building {
@@ -123,8 +143,12 @@ spritelayout spritelayout_tall_park_1 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) > 512 ||
       construction_state < 2;
   }
   building {
@@ -136,8 +160,12 @@ spritelayout spritelayout_tall_park_1 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) > 512 ||
       construction_state < 2;
   }
   building {
@@ -149,8 +177,12 @@ spritelayout spritelayout_tall_park_1 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) > 512 ||
       construction_state < 2;
   }
   building {
@@ -170,8 +202,12 @@ spritelayout spritelayout_tall_park_2 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) > 512 ||
       construction_state < 3;
   }
   building {
@@ -183,8 +219,12 @@ spritelayout spritelayout_tall_park_2 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) > 512 ||
       construction_state < 3;
   }
   building {
@@ -196,8 +236,12 @@ spritelayout spritelayout_tall_park_2 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) > 512 ||
       construction_state < 3;
   }
   building {
@@ -209,8 +253,12 @@ spritelayout spritelayout_tall_park_2 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) > 512 ||
       construction_state < 3;
   }
   building {
@@ -230,8 +278,12 @@ spritelayout spritelayout_tall_park_3 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) > 512 ||
       construction_state < 2;
   }
   building {
@@ -243,8 +295,12 @@ spritelayout spritelayout_tall_park_3 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) > 512 ||
       construction_state < 2;
   }
   building {
@@ -256,8 +312,12 @@ spritelayout spritelayout_tall_park_3 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) > 512 ||
       construction_state < 2;
   }
   building {
@@ -269,8 +329,12 @@ spritelayout spritelayout_tall_park_3 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) > 512 ||
       construction_state < 2;
   }
   building {
@@ -296,9 +360,9 @@ item (FEAT_HOUSES, item_tall_park) {
   property {
     substitute: 0;
     name: string(STR_NAME_TALL_PARK);
-    probability: 1;
+    probability: 7;
     years_available: [2060, -1];
-    minimum_lifetime: 0;
+    minimum_lifetime: 20;
     availability_mask: [bitmask(TOWNZONE_INNER_SUBURB, TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];
     building_class: 1; // Walkway levels.
 	accepted_cargos: [[PASS, 8], [FOOD, 6]];

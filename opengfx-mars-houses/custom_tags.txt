@@ -1,0 +1,6 @@
+VERSION        :noRev
+VERSION_STRING :noRev
+TITLE          :OpenGFX Mars Houses - reMOD Late Start noRev
+FILENAME       :ogfx-mars-houses-remod.grf
+REPO_HASH      :
+NEWGRF_VERSION :0

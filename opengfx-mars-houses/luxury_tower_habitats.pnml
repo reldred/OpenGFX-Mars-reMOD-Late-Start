@@ -51,8 +51,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -64,8 +68,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -77,8 +85,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -90,8 +102,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -103,8 +119,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 258 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -116,8 +136,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 258 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -129,8 +153,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 258 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -142,8 +170,12 @@ spritelayout spritelayout_luxury_tower_habitat_0 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 258 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -163,8 +195,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -176,8 +212,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -189,8 +229,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -202,8 +246,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -215,8 +263,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 258 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -228,8 +280,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 258 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -241,8 +297,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 258 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -254,8 +314,12 @@ spritelayout spritelayout_luxury_tower_habitat_1 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 258 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -275,8 +339,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -288,8 +356,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -301,8 +373,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -314,8 +390,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -327,8 +407,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 258 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -340,8 +424,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 258 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -353,8 +441,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 258 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -366,8 +458,12 @@ spritelayout spritelayout_luxury_tower_habitat_2 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 258 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -387,8 +483,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 257 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -400,8 +500,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 257 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -413,8 +517,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 257 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -426,8 +534,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 257 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 1;
   }
   building {
@@ -439,8 +551,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,-1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,-1) > 0 ||
+      nearby_tile_slope(0,-2) > 0 ||
+      nearby_tile_house_class(0,-1) >= 0 ||
       nearby_tile_house_class(0,-2) < 258 ||
+	  nearby_tile_house_class(0,-2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -452,8 +568,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(-1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(-1,0) > 0 ||
+      nearby_tile_slope(-2,0) > 0 ||
+      nearby_tile_house_class(-1,0) >= 0 ||
       nearby_tile_house_class(-2,0) < 258 ||
+	  nearby_tile_house_class(-2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -465,8 +585,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 8;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(0,1) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(0,1) > 0 ||
+      nearby_tile_slope(0,2) > 0 ||
+      nearby_tile_house_class(0,1) >= 0 ||
       nearby_tile_house_class(0,2) < 258 ||
+	  nearby_tile_house_class(0,2) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -478,8 +602,12 @@ spritelayout spritelayout_luxury_tower_habitat_3 {
     yextent: 4;
     zextent: 8;
     hide_sprite:
-      nearby_tile_house_class(1,0) > 256 ||
+      nearby_tile_slope(0,0) > 0 ||
+      nearby_tile_slope(1,0) > 0 ||
+      nearby_tile_slope(2,0) > 0 ||
+      nearby_tile_house_class(1,0) >= 0 ||
       nearby_tile_house_class(2,0) < 258 ||
+	  nearby_tile_house_class(2,0) >= 512 ||
       construction_state < 2;
   }
   building {
@@ -505,9 +633,9 @@ item (FEAT_HOUSES, item_luxury_tower_habitat) {
   property {
     substitute: 0;
     name: string(STR_NAME_LUXURY_TOWER_HABITAT);
-    probability: 1;
+    probability: 7;
     years_available: [2070, -1];
-    minimum_lifetime: 0;
+    minimum_lifetime: 20;
     population: 192;
     mail_multiplier: 64;
     availability_mask: [bitmask(TOWNZONE_CENTRE), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];

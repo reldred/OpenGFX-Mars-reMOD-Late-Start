@@ -141,7 +141,7 @@ item (FEAT_HOUSES, item_large_habitat) {
     name: string(STR_NAME_LARGE_HABITAT);
     probability: 15;
     years_available: [2040, -1];
-    minimum_lifetime: 0;
+    minimum_lifetime: 20;
     population: 32;
     mail_multiplier: 12;
     availability_mask: [bitmask(TOWNZONE_OUTSKIRT, TOWNZONE_OUTER_SUBURB), ALL_CLIMATES | bitmask(ABOVE_SNOWLINE)];

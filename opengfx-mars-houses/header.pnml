@@ -18,7 +18,7 @@
 
 /* NewGRF definition. */
 grf {
-  grfid: "RJE\11";
+  grfid: "RJE\0B";
   name: string(STR_GRF_NAME);
   desc: string(STR_GRF_DESC);
   url: string(STR_GRF_URL);
@@ -29,7 +29,7 @@ grf {
 
 
 /* Disable all default houses. */
-disable_item(FEAT_HOUSES);
+/* disable_item(FEAT_HOUSES); */
 
 
 
