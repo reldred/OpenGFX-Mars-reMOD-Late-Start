@@ -21,10 +21,10 @@
 
 /* Concrete spriteset. */
 spriteset(spriteset_concrete, "../graphics/Terrain/ConcreteGroundTile_8bpp.png") {
-  [1, 1, 64, 31, -32, 0]
-  [1, 1, 64, 31, -32, 0]
-  [1, 1, 64, 31, -32, 0]
-  [1, 1, 64, 31, -32, 0]
+  [1, 1, 64, 31, -31, 0]
+  [1, 1, 64, 31, -31, 0]
+  [1, 1, 64, 31, -31, 0]
+  [1, 1, 64, 31, -31, 0]
 }
 
 
